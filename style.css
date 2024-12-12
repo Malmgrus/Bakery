@@ -1,5 +1,5 @@
 :root {
-    background-color: black;
+    background-color: white;
     box-sizing: border-box;
     height: 2000px;
 }
@@ -56,10 +56,12 @@ body {
 
 .mainHeadline {
     position: absolute;
-    right: 35%;
+    right: 23%;
     top: 40vh;
-    font-size: 2.25rem;
-    border: solid 1px black;
+}
+
+#headline {
+    position: absolute;
 }
 
 .mainText {

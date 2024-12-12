@@ -9,9 +9,11 @@ function animationRubric() {
         targets: '#headline path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function(el, i) { return i * 250 },
+        duration: 2800,
+        delay: function(el, i) {return i * 450},
         direction: 'alternate',
         loop: true
     });
 }
+
+document.addEventListener('DOMContentLoaded', animationRubric);
