@@ -7,22 +7,29 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div id="Page1">
-        Content of page 1
-        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
-        <a href="#" onclick="return show('Page3','Page1');">show page 3</a>
-    </div>
+    <header class="navigator">
+        <div class="companyLogo">
+            <h1 class="name">Sött och elegant</h1>
+        </div>
         
-    <div id="Page2" style="display:none">
-        Content of page 2
-        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
-        <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
-    </div>
+        <nav class="navbar">
+            <a href="index.html" class="navOption">Home</a></li>
+            <a href="shop.html" class="navOption">Shop</a></li>
+            <a href="about.html" class="navOption">About</a></li>
+        </nav>
 
-    <div id="Page3" style="display: none">
-        Content of page 3
-        <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
-        <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
-    </div>
+        <div class="empty"></div>
+    </header>
+
+    <main>
+        <iframe src="https://www.openstreetmap.org/search?query=magnus%20johanssons%20bageri#map=15/59.30288/18.09907"
+        height="500px" width="500px">
+
+        </iframe>
+        <div id="map">
+
+        </div>
+    </main>
+
 </body>
 </html>

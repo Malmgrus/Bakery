@@ -10,11 +10,12 @@ body {
 
 .navigator {
     background-color: rgba(0, 0 , 0, 0.5);
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: fixed;
+    
 }
 
 .companyLogo {
@@ -46,12 +47,11 @@ body {
 }
 
 .mainPic {
-    width: 100%;
+    width: 100vw;
 }
 
 .bakeryPic {
-    width: 100%;
-    
+    width: 100vw;
 }
 
 .mainHeadline {
@@ -82,4 +82,42 @@ margin-right: 20%;
 
 .mainPageTxt {
     font-size: 1.5em;
+}
+
+.page {
+    text-align: center;
+}
+
+.pageContent {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.product {
+    width: 20vw;
+    margin-right: 2vw;
+    margin-top: 7vh;
+}
+
+.productImage {
+    width: 20vw;
+
+    border: solid 2px black;
+}
+
+.productName {
+
+}
+
+.interactions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3vh;
+}
+
+#map {
+    height: 40vh;
 }
