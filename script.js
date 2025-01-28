@@ -25,8 +25,30 @@ function showBasket() {
     let showCake = sessionStorage.getItem("cake");
     let showRaspberryRoll = sessionStorage.getItem("raspberryRoll");
     let showMuffin = sessionStorage.getItem("muffin");
+    let chocoPrice = showCake * 50;
+    let raspberryPrice = showRaspberryRoll * 35;
+    let muffinPrice = showMuffin * 25;
+    let total = chocoPrice + raspberryPrice + muffinPrice;
+
+    document.getElementById('displayChocolate').innerHTML = showCake;
+    document.getElementById('displayRaspberry').innerHTML = showRaspberryRoll;
+    document.getElementById('displayMuffin').innerHTML = showMuffin;
+    document.getElementById('totalPrice').innerHTML = total;
 }
 
 function hideBasket() {
     document.getElementById("basketPopup").style.display = "none";
+}
+
+slideIndex = 0;
+slideShow();
+function slideShow() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(slideShow, 5000);
 }

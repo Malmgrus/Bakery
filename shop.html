@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Produkt sida</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
         </div>
         
         <nav class="navbar">
-            <a href="index.html" class="navOption">Home</a></li>
-            <a href="shop.html" class="navOption">Shop</a></li>
-            <a href="about.html" class="navOption">About</a></li>
+            <a href="index.html" class="navOption">Start</a></li>
+            <a href="shop.html" class="navOption">Produkter</a></li>
+            <a href="index.html#storeDetails" class="navOption">Hitta hit</a></li>
         </nav>
 
         <div class="basket">
@@ -29,19 +29,37 @@
     <section class="basketPopup" id="basketPopup">
         <div class="popupContent">
             <h3>Kundvagn</h3>
-            <div class="basketItems">
-                <!-- Dynamically generated content -->
+
+            <div style="display: flex; justify-content: center;">
+                <p style="margin-right: 1%;">Chokladtårta:</p>
+                <p id="displayChocolate"></p>
+                <p style="margin-left: 1%;">st</p>
             </div>
-            <div class="total">
-                <h4>Totalt:</h4>
-                <p id="totalPrice">$0</p>
+            <div style="display: flex; justify-content: center;">
+                <p style="margin-right: 1%;">HallonRulle:</p>
+                <p id="displayRaspberry"></p>
+                <p style="margin-left: 1%;">st</p>
             </div>
-            <div class="checkout">
-                <button type="button" onclick="checkout()">Checkout</button>
+            <div style="display: flex; justify-content: center;">
+                <p style="margin-right: 1%;">Muffin:</p>
+                <p id="displayMuffin"></p>
+                <p style="margin-left: 1%;">st</p>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <p style="margin-Right: 1%;">Totalt:</p>
+                <p id="totalPrice"></p>
+                <p style="margin-left: 1%;">kr</p>
             </div>
             <button onclick="hideBasket()">Stäng</button>
         </div>
     </section>
+
+    <div style="background-color: black;">
+        <img class="slide" src="frontDesk.jpg">
+        <img class="slide" src="bakeryProducts.jpg">
+        <img class="slide" src="cinnamonRoll.jpg">
+    </div>
 
     <main class="page" id="Page1">
         <content class="pageContent">
@@ -130,8 +148,8 @@
             </div>
         </content>
 
-        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
-        <a href="#" onclick="return show('Page3','Page1');">show page 3</a>
+        <a class="pageButton" href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+        <a class="pageButton" href="#" onclick="return show('Page3','Page1');">show page 3</a>
     </main>
         
     <main class="page" id="Page2" style="display:none">
@@ -219,8 +237,8 @@
                 </div>
             </div>
         </content>
-        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
-        <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
+        <a class="pageButton" href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+        <a class="pageButton" href="#" onclick="return show('Page3','Page2');">Show page 3</a>
     </main>
 
     <main class="page" id="Page3" style="display: none">
@@ -308,9 +326,33 @@
                 </div>
             </div>
         </content>
-        <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
-        <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
+        <a class="pageButton" href="#" onclick="return show('Page1','Page3');">Show page 1</a>
+        <a class="pageButton" href="#" onclick="return show('Page2','Page3');">Show page 2</a>
     </main>
+
+    <footer class="footer">
+        <div class="footerText">
+            <h3>villkor</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio eum et omnis, alias, officiis quae quod minima obcaecati adipisci aperiam distinctio temporibus earum sapiente deserunt molestiae ad maiores? Unde, dolor!
+            </p>
+        </div>
+        <div class="footerText">
+            <h3>Våra butiker</h3>
+            <ul class="footerLinks">
+                <li><a class="footerLinks" href="#">Butik 1</a></li>
+                <li><a class="footerLinks" href="#">Butik 2</a></li>
+                <li><a class="footerLinks" href="#">Butik 3</a></li>
+            </ul>
+        </div>
+        <div class="footerText">
+            <h3>Kontakta oss</h3>
+            <ul class="footerLinks">
+                <li><a class="footerLinks" href="#">Email@Email.com</a></li>
+                <li><a class="footerLinks" href="#">Telefonnummer</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
 			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
