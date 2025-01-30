@@ -45,7 +45,7 @@ button {
     background-color: white;
     border: solid 2px black;
     width: 20vw;
-    height: 40vh;
+    height: 37vh;
     margin-top: 10vh;
     z-index: 100;
     margin-top: 10vh;
@@ -63,7 +63,7 @@ button {
 }
 .name {
     color: white;
-    font-size: 1em;
+    font-size: 1.7em;
 }
 
 .navbar {
@@ -83,20 +83,40 @@ button {
     background-color: lightblue;
 }
 
-.mainPic {
-    width: 100%;
+@media (max-width: 800px) {
+    .name {
+        font-size: 1.2em;
+    }
+
+    .slideShow {
+        padding-top: 10vh;
+    }
+
+    .footer {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 450px) {
+    .basketPopup {
+        width: 50vw;
+        left: 50vw;
+    }
 }
 
 .bakeryPic {
-    width: 100%;
+    background-image: url('welcome.jpg');
+    background-size: cover;
+    background-position: center;
+    
     height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .mainHeadline {
     position: absolute;
-
-    top: 40vh;
-
 }
 
 #headline {
@@ -195,15 +215,14 @@ margin-right: 20%;
     height: 45vh;
     margin-top: 15vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .footerText {
     color: white;
-    margin-left: 10vw;
-    margin-right: 10vw;
     text-align: center;
+    display: inline-block;
 }
 
 .footerText h3 {
