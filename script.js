@@ -1,11 +1,11 @@
+// Shows and hides pages on product page.
 function show(shown, hidden) {
     document.getElementById(shown).style.display='block';
     document.getElementById(hidden).style.display='none';
     return false;
 }
 
-//console.log(show());
-
+// Adds product to the basket. If the product is already in the basket, it increments the amount.
 function addToBasket(product) {
     let basket = {};
 
@@ -15,11 +15,11 @@ function addToBasket(product) {
     } else {
         let productAmount = sessionStorage.getItem(product);
         productAmount++;
-        console.log(productAmount, " går in i update");
         sessionStorage.setItem(product, productAmount);
     }
 }
 
+// Retrives products from session storage and displays them.
 function showBasket() {
     document.getElementById("basketPopup").style.display = "block";
     let showCake = sessionStorage.getItem("cake");
@@ -36,10 +36,16 @@ function showBasket() {
     document.getElementById('totalPrice').innerHTML = total;
 }
 
+// Hide the popup basket
 function hideBasket() {
     document.getElementById("basketPopup").style.display = "none";
 }
 
+document.getElementById('clearBasket').addEventListener('click', function() {
+    sessionStorage.clear();
+});
+
+// Slideshow on product page.
 slideIndex = 0;
 slideShow();
 function slideShow() {

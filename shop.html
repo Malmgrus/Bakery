@@ -30,27 +30,29 @@
         <div class="popupContent">
             <h3>Kundvagn</h3>
 
-            <div style="display: flex; justify-content: center;">
+            <div class="displayContent">
                 <p style="margin-right: 1%;">Chokladtårta:</p>
                 <p id="displayChocolate"></p>
                 <p style="margin-left: 1%;">st</p>
             </div>
-            <div style="display: flex; justify-content: center;">
+            <div class="displayContent">
                 <p style="margin-right: 1%;">HallonRulle:</p>
                 <p id="displayRaspberry"></p>
                 <p style="margin-left: 1%;">st</p>
             </div>
-            <div style="display: flex; justify-content: center;">
+            <div class="displayContent">
                 <p style="margin-right: 1%;">Muffin:</p>
                 <p id="displayMuffin"></p>
                 <p style="margin-left: 1%;">st</p>
             </div>
 
-            <div style="display: flex; justify-content: center;">
+            <div class="displayContent">
                 <p style="margin-Right: 1%;">Totalt:</p>
                 <p id="totalPrice"></p>
                 <p style="margin-left: 1%;">kr</p>
             </div>
+
+            <button id="clearBasket">Rensa korg</button>
             <button onclick="hideBasket()">Stäng</button>
         </div>
     </section>
@@ -330,7 +332,7 @@
         <a class="pageButton" href="#" onclick="return show('Page2','Page3');">Show page 2</a>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="footerText">
             <h3>villkor</h3>
             <p>
